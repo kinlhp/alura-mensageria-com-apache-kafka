@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>com.kinlhp.learning</groupId>
+    <artifactId>e-commerce</artifactId>
+    <version>1.0-SNAPSHOT</version>
+    <packaging>pom</packaging>
+    <modules>
+        <module>fraud-detector-consumer</module>
+        <module>email-consumer</module>
+        <module>log-consumer</module>
+        <module>order-producer</module>
+        <module>common-kafka</module>
+        <module>customer-consumer</module>
+        <module>order-api</module>
+        <module>reading-report-consumer</module>
+        <module>customer-api</module>
+        <module>email-producer</module>
+        <module>common-database</module>
+    </modules>
+    <properties>
+        <maven.compiler.source>17</maven.compiler.source>
+        <maven.compiler.target>17</maven.compiler.target>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
+    <dependencies>
+        <!-- confluent -->
+        <!-- <dependency> -->
+            <!-- https://packages.confluent.io/maven/io/confluent/kafka-avro-serializer -->
+            <!-- <groupId>io.confluent</groupId> -->
+            <!-- <artifactId>kafka-avro-serializer</artifactId> -->
+            <!-- <version>7.4.0</version> -->
+        <!-- </dependency> -->
+        <!-- jackson -->
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-databind</artifactId>
+            <version>2.15.2</version>
+        </dependency>
+        <!-- kafka -->
+        <dependency>
+            <!-- https://packages.confluent.io/maven/org/apache/kafka/kafka-clients -->
+            <groupId>org.apache.kafka</groupId>
+            <artifactId>kafka-clients</artifactId>
+            <version>7.4.0-ccs</version>
+        </dependency>
+        <!-- slf4j -->
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-simple</artifactId>
+            <version>2.0.7</version>
+        </dependency>
+    </dependencies>
+    <repositories>
+        <!-- confluent -->
+        <repository>
+            <id>confluent</id>
+            <url>https://packages.confluent.io/maven</url>
+        </repository>
+    </repositories>
+</project>
